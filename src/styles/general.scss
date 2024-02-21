@@ -23,9 +23,29 @@ body {
     height: 200%;
     position: absolute;
 
+}
+
+.planetContainer {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
 
 
+}
+
+.planetContainer2 {
+    width: 50%;
+    position: absolute;
+    overflow: hidden;
 
 
+}
 
+.planet {
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10rem;
+    transform: rotate(180deg);
 }
