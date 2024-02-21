@@ -33,7 +33,8 @@ export default {
 </script>
 
 <template>
-    <img class="background" :style="{ 'left': 'calc(-50% - ' + xpos + 'px)', 'bottom': 'calc(-50% - ' + ypos + 'px)' }"
+    <img class="background"
+        :style="{ 'left': 'calc(-50% - ' + xpos + 'px)', 'bottom': 'calc(-50% - ' + ypos / 1.3 + 'px)' }"
         src="https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg" alt="">
     <div class="planetContainer"
         :style="{ 'left': 'calc(-80% - ' + xpos / 2 + 'px)', 'bottom': 'calc(-50% - ' + ypos / 8 + 'px)' }">
