@@ -10,4 +10,22 @@ body {
     font-family: sans-serif;
     background-color: $themeColorDark;
     color: $themeColorLight;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+
+.background {
+    width: 200%;
+    height: 200%;
+    position: absolute;
+
+
+
+
+
+
 }

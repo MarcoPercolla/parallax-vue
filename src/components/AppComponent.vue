@@ -1,35 +1,40 @@
 <script>
 import { store } from "../store.js" //state management
-import register from "../debug" //per debuggare il componente da console
+
 
 export default {
     name: "AppComponent",
     data() {
         return {
-            store
+            store,
+            xpos: 0,
+            ypos: 0,
+
+
         }
     },
     methods: {
         doThings() {
-            console.log("AppComponent does things");
+            window.addEventListener("mousemove", (e) => {
+                this.xpos = e.clientX - window.innerWidth / 2;
+                this.ypos = e.clientY - window.innerHeight / 2;
+
+
+                console.log(this.xpos, this.ypos);
+            })
+
         }
     },
     mounted() {
-        register(this); //per debuggare il componente da console
+
         this.doThings();
     }
 }
 </script>
 
 <template>
-    <div>
-        <h1>Sono un componente!</h1>
-    </div>
+    <img class="background" :style="{ 'left': 'calc(-50% - ' + xpos + 'px)', 'bottom': 'calc(-50% - ' + ypos + 'px)' }"
+        src="https://images.pond5.com/simple-star-space-background-effect-023768280_prevstill.jpeg" alt="">
 </template>
 
-<style scoped lang="scss">
-// importo variabili
-// @use './styles/partials/variables' as *;
-
-// ...qui eventuale SCSS di AppComponent
-</style>
+<style  lang="scss"></style>
